@@ -1,0 +1,285 @@
+/********** Template CSS **********/
+:root {
+    --primary: #7C1649;
+    --secondary: #eadeb7;
+    --light: #eadeb7;
+    --dark: #12141D;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.text-prim{
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Button */
+.btn, .custom-nav-link.active {
+    font-weight: 500;
+    transition: .5s;
+    background: var(--primary);
+    color: white;
+}
+
+.custom-nav-link {
+    background-color: white;
+    color: var(--primary);
+    border: none;
+}
+
+.btn:hover{
+    background: var(--light);
+    color: black;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+/* Navbar Section */
+.navbar.fixed-top {
+    display: none;
+}
+
+.navbar .navbar-nav .nav-link, .logoNav{
+    padding: 20px 15px;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link  {
+        padding: 10px 0;
+    }
+}
+
+
+/* Home Section */
+.home{
+    height: 100vh;
+    width: 100%;
+  }
+  .swiper-slide{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+  .home .swiper-slide::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: var(--z-overlay);
+  }
+  .home-img{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .home-details{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: var(--z-overlay);
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    row-gap: 4rem;
+  }
+  
+  .homeSubtitle{
+    text-align: center;
+    font-size: 100px;
+    color: white;
+  }
+  .homeTitle{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-weight: 300;
+  }
+
+/* About Me Section */
+#about .progress {
+    height: 5px;
+    border-radius: 5px;
+}
+
+#about .progress .progress-bar {
+    width: 0px;
+    border-radius: 5px;
+    transition: 3s;
+}
+
+#about .nav-pills .nav-link {
+    color: var(--dark);
+}
+
+#about .nav-pills .nav-link.active {
+    color: #FFFFFF;
+}
+
+#about .tab-content hr {
+    width: 30px;
+}
+
+/* Work Section */
+.meaning-left,
+.meaning-right {
+    position: relative;
+}
+
+.meaning-left img,
+.meaning-right img {
+    position: absolute;
+    padding: 5px;
+    border: 1px solid var(--secondary);
+    border-radius: 70px;
+}
+
+.meaning-left img:nth-child(1),
+.meaning-right img:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.meaning-left img:nth-child(2),
+.meaning-right img:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.meaning-left img:nth-child(3),
+.meaning-right img:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    bottom: 10%;
+    right: 10%;
+}
+
+.meaning-carousel .owl-item img {
+    width: 120px;
+    height: 120px;
+}
+
+.meaning-carousel .owl-dots {
+    height: 40px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meaning-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.meaning-carousel .owl-dot::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 5px;
+    left: 5px;
+    border-radius: 16px;
+    background: var(--secondary);
+    transition: .5s;
+}
+
+.meaning-carousel .owl-dot.active::after {
+    background: var(--primary);
+}
+
+/* Logo Section */
+.logo-images{
+    display: grid;
+    align-items: center;
+    column-gap: 2rem;
+    justify-content: space-between;
+    justify-items: center;
+    margin-top: 3rem;
+    grid-template-columns: repeat(7,1fr);
+  }
+  .logo-image img{
+    width: 150px;
+    object-fit: contain;
+    opacity: 0.4;
+    transition: var(--tran-0-5);
+  }
+  .logo-image-detail img{
+    width: 50px;
+    object-fit: contain;
+    opacity: 0.4;
+    transition: var(--tran-0-5);
+  }
+  .logo-img:hover{
+    opacity: 1;
+  }
